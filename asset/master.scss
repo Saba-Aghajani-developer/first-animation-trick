@@ -1,0 +1,547 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    animation: bg-color 3s infinite;
+    overflow: hidden;
+
+}
+
+.main-box {
+    width: 100%;
+    height: 70vh;
+    border-bottom: 10px solid #673C63;
+    box-shadow: 0 0 100px 50px gray;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    >.child-box {
+        width: 50%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+
+        >.candle1 {
+            width: 100px;
+            height: 130px;
+            border: 5px solid #673C63;
+            background-color: #fff;
+            border-radius: 5px 5px 0 0;
+            margin: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            position: relative;
+            border-bottom: none;
+            animation: short-candle 3s cubic-bezier(0, .68, .81, .3) infinite;
+            position: relative;
+
+            .smoke {
+                content: '';
+                width: 15px;
+                height: 15px;
+                background-color: #545454;
+                border-radius: 50%;
+                position: absolute;
+                top: -70px;
+                left: -10px;
+                animation: smoke 3s infinite;
+            }
+
+            .circle {
+                width: 200px;
+                height: 200px;
+                border: 3px solid darkgrey;
+                border-radius: 50%;
+                position: absolute;
+                left: 50%;
+                top: -130px;
+                transform: translate(-50%, -50%);
+                animation: circle 3s infinite;
+            }
+
+            .wick {
+                width: 5px;
+                height: 30px;
+                background-color: #673C63;
+                position: absolute;
+                top: -30px;
+            }
+
+            >.flame {
+                width: 35px;
+                height: 45px;
+                background-color: orange;
+                position: absolute;
+                top: -65px;
+                border-radius: 60px 50% 40px 40px;
+                transform-origin: 50% 100%;
+                animation: flame-animation 3s infinite;
+            }
+
+            .eyes-box {
+                width: 80%;
+                height: 20px;
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                >.eyes {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #673C63;
+                    margin: 30px 10px;
+                    position: relative;
+                    animation: close-eyes 3s infinite;
+                }
+
+                >.l-close-eye1,
+                >.l-close-eye2 {
+                    width: 30px;
+                    height: 3px;
+                    background-color: #673C63;
+                    transform-origin: 100% 50%;
+                    position: absolute;
+                    top: 30px;
+                    left: 10px;
+                    animation: open-eyes 3s infinite;
+                }
+
+                >.l-close-eye1 {
+                    transform: rotate(20deg);
+                }
+
+                >.l-close-eye2 {
+                    transform: rotate(-20deg);
+                }
+
+                >.r-close-eye1,
+                >.r-close-eye2 {
+                    width: 30px;
+                    height: 3px;
+                    background-color: #673C63;
+                    transform-origin: 0 50%;
+                    position: absolute;
+                    top: 30px;
+                    right: 10px;
+                    animation: open-eyes 3s infinite;
+                }
+
+                >.r-close-eye1 {
+                    transform: rotate(20deg);
+                }
+
+                >.r-close-eye2 {
+                    transform: rotate(-20deg);
+                }
+            }
+        }
+
+        >.candle2 {
+            width: 90px;
+            height: 200px;
+            border: 5px solid #673C63;
+            background-color: #fff;
+            margin: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            position: relative;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            position: relative;
+            animation: tall-candle 3s infinite;
+
+            .mouth {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: #673C63;
+                position: absolute;
+                left: 10px;
+                top: 45px;
+                animation: mouth 3s infinite;
+            }
+
+            .wick {
+                width: 5px;
+                height: 30px;
+                background-color: #673C63;
+                position: absolute;
+                top: -30px;
+            }
+
+            .eyes-box {
+                width: 80%;
+                height: 20px;
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                >.eyes {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #673C63;
+                    margin: 30px 10px;
+                    position: relative;
+                    transform: translateX(0);
+                    animation: taller-candle-eyes 3s infinite;
+                }
+            }
+        }
+    }
+}
+
+@keyframes smoke {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    25% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    26% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    27% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    28% {
+        transform: scale(.8);
+        opacity: 1;
+    }
+
+    29% {
+        transform: scale(.8);
+        opacity: 1;
+    }
+
+    30% {
+        transform: scale(.6);
+        opacity: 1;
+    }
+
+    31% {
+
+        transform: scale(.6);
+        opacity: 1;
+    }
+
+    32% {
+
+        transform: scale(.4);
+        opacity: 1;
+    }
+
+    33% {
+
+        transform: scale(.4);
+        opacity: 1;
+    }
+
+    34% {
+
+        transform: scale(.2);
+        opacity: 1;
+    }
+
+    35% {
+
+        transform: scale(.2);
+        opacity: 1;
+    }
+
+    36% {
+
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 1;
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    10% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    24% {
+        transform: scale(10);
+        opacity: .5;
+    }
+
+    25% {
+        transform: scale(10);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+@keyframes taller-candle-eyes {
+    0% {
+        transform: translateX(0);
+    }
+
+    10% {
+        transform: translateX(0);
+
+    }
+
+    23% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes mouth {
+    0% {
+        transform: scale(0);
+    }
+
+    10% {
+        transform: scale(1);
+
+    }
+
+    18% {
+        transform: scale(.8);
+    }
+
+    23% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(.5);
+    }
+
+    26% {
+        transform: scale(.3);
+    }
+
+    28% {
+        transform: scale(.1);
+    }
+
+    30% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes flame-animation {
+    0% {
+        visibility: visible;
+        transform: rotate(4deg);
+        border-right-color: orange;
+    }
+
+    5% {
+        visibility: visible;
+        transform: rotate(-4deg);
+        border-right-color: #f8ca74;
+    }
+
+    10% {
+        visibility: visible;
+        transform: rotate(4deg);
+        border-right-color: orange;
+    }
+
+    15% {
+        visibility: visible;
+        transform: rotate(-4deg);
+        border-right-color: #f8ca74;
+    }
+
+    20% {
+        visibility: visible;
+        transform: rotate(4deg);
+        border-right-color: orange;
+    }
+
+    23% {
+        visibility: visible;
+        transform: rotate(-4deg);
+        border-right-color: #f8ca74;
+    }
+
+    25% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes close-eyes {
+    0% {
+        height: 10px;
+    }
+
+    23% {
+        height: 10px;
+    }
+
+    24% {
+        height: 0px;
+    }
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes open-eyes {
+    0% {
+        height: 0;
+    }
+
+    23% {
+        height: 0;
+    }
+
+    25% {
+        height: 3px;
+    }
+
+    48% {
+        height: 3px;
+    }
+
+    100% {
+        height: 3px;
+    }
+}
+
+@keyframes short-candle {
+    0% {
+        height: 120px;
+        width: 100px;
+        background-color: #ffffff;
+    }
+
+    23% {
+        height: 120px;
+        width: 100px;
+        background-color: #ffffff;
+    }
+
+    25% {
+        height: 110px;
+        width: 105px;
+        background-color: #c83232;
+    }
+
+    100% {
+        height: 110px;
+        width: 105px;
+        background-color: #c83232;
+    }
+}
+
+@keyframes tall-candle {
+    0% {
+        height: 200px;
+        width: 90px;
+    }
+
+    10% {
+        height: 210px;
+        width: 100px;
+    }
+
+    18% {
+        height: 215px;
+        width: 103px;
+    }
+
+    23% {
+        height: 210px;
+        width: 100px;
+    }
+
+    25% {
+        height: 200px;
+        width: 90px;
+    }
+
+    100% {
+        height: 200px;
+        width: 90px;
+    }
+}
+
+@keyframes bg-color {
+    0% {
+        background-color: #fff;
+    }
+
+    23% {
+        background-color: #fff;
+    }
+
+    25% {
+        background-color: #000000;
+    }
+
+    48% {
+        background-color: #000000;
+    }
+
+    50% {
+        background-color: #000000;
+    }
+
+    75% {
+        background-color: #000000;
+    }
+
+    100% {
+        background-color: #000000;
+    }
+}
