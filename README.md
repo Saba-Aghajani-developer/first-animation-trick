@@ -1,5 +1,5 @@
 # First Animation Trick
-![First Animation Trick](https://github.com/Saba-Aghajani-developer/first-animation-trick/assets/135870519/cb768437-795c-43f0-ba50-e9e17246b365)
+![view3](https://github.com/Saba-Aghajani-developer/first-animation-trick/assets/135870519/77450a23-74da-47b3-8ab6-ebef28d751d4)
 
 - [Demo Project](https://saba-aghajani-developer.github.io/first-animation-trick/)
 
